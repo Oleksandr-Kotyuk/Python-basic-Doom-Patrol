@@ -149,12 +149,12 @@ print(new_lst_to_sort)
 #[10, 36, 2, 48, 66, 30, 26, 110]
 
 #23
-
 def power(list_A, List_B):
     return [ list_A[x]**list_B[x] for x in range(0, 3)]
 list_A = [2, 3, 4]
 list_B = [5, 6, 7]
 print(power(list_A, list_B))
+#[32, 729, 16384]
 
 #24
 import functools
