@@ -64,15 +64,17 @@ for sound in animals:
 
 # 8
 class City:
+    def __new__(cls, name, population):
+        if population < 1500:
+            return "Your city is too small"
+        return object.__new__(cls)
+
     def __init__(self, name, population):
         self.name = name
         self.population = population
 
-    def __call__(self):
-        if self.population < 1500:
-            print(f"Your city {self.name} is too small")
-        else:
-            print(self.population)
+    def population(self):
+        return self.population
 
 
 lviv = City('Lviv', 670000)
@@ -82,4 +84,4 @@ dnipro = City('Dnipro', 1127000)
 cities = (lviv, kovel, dnipro)
 
 for el in cities:
-    el()
+    print(el)
