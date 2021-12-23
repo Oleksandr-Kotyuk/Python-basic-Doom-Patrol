@@ -124,14 +124,9 @@ class Celsius:
         self._temperature = temperature
 
     @property
-    def temperature(self):
-        return self._temperature
-
-    @temperature.setter
-    def temperature(self, new_temperature):
-        self._temperature = new_temperature
+    def converter(self):
+        return self._temperature * 1.8 + 32
 
 
-convert = Celsius(12)
-convert.temperature = (convert.temperature * 1.8) + 32
-print(convert.temperature)
+temperature_today = Celsius(45)
+print(temperature_today.converter)
