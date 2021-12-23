@@ -130,4 +130,3 @@ class Celsius:
 
 temperature_today = Celsius(45)
 print(temperature_today.converter)
-
